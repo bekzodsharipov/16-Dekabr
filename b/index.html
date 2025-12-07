@@ -6,7 +6,330 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>16-Dekabr</title>
     <style>
-       * {margin: 0;padding: 0;box-sizing: border-box;}body {background-color: #111A29;}.container {max-width: 490px;width: 100%;margin: 0 auto;padding: 0 10px;padding-top: 0;display: flex;flex-direction: column;align-items: center;font-family: sans-serif;position: relative;}.header {width: 100%;background-color: #090C13;border: 0.63px solid #090C14;border-radius: 0px 0px 20px 20px;padding: 30px 0px;display: flex;align-items: center;justify-content: center;gap: 12px;margin-bottom: 17px;min-width: 313px;max-width: 348px;}.header__box {display: flex;align-items: center;gap: 7px;}.header__box-dot {background-color: #27C459;width: 10px;height: 10px;border-radius: 100%;}.header__text {font-family: Montserrat, sans-serif;color: white;font-weight: 600;font-size: 16px;line-height: 100%;text-wrap: nowrap;}.date__timer {color: white;display: flex;align-items: center;justify-content: center;font-size: clamp(28px, 8vw, 32px);font-weight: 600;font-family: "Kuunari", sans-serif;line-height: 150%;position: relative;z-index: 30;width: fit-content;min-height: 40px;}.title {font-family: "Big Shoulders Display", sans-serif;font-weight: 800;font-size: clamp(23px, 7vw, 36px);line-height: 135%;text-align: center;text-transform: uppercase;color: white;margin-bottom: 10px;}.title span {background: linear-gradient(90deg, #FFF2BD 0%, #FFD72E 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;}.text {font-family: Poppins, sans-serif;font-weight: 400;color: white;font-size: clamp(12px, 3.5vw, 16px);line-height: 135%;text-align: center;padding: 10px;border: 1px solid #FFC65A;border-radius: 10px;margin-bottom: 9px;}.text span {font-weight: 600;}.date__imgs {position: absolute;transform: rotate(16deg);left: 3%;z-index: 0;}.date__img {position: absolute;transform: rotate(-64deg);right: -30px;top: -50%;}.center {position: relative;width: 100%;display: flex;align-items: center;justify-content: center;}.center__bg {position: absolute;left: 55%;top: 270px;transform: translate(-55.4%);z-index: -1;max-width: 626px;width: 100%;}.expert__img {object-fit: contain;max-width: 483px;width: 100%;height: auto;margin-bottom: -119px;position: relative;z-index: 10;}.event__btn {text-decoration: none;cursor: pointer;max-width: 409px;width: 100%;display: flex;align-items: center;justify-content: center;gap: 10px;border: none;position: relative;background-color: #2664EB;box-shadow: 0px 6px 0px 0px #003099;border-radius: 13px;padding: 40px 0;z-index: 20;font-family: "Poppins", sans-serif;color: white;font-weight: 700;font-size: 22px;line-height: 150%;text-align: center;text-transform: uppercase;}.event__btn__img {width: 100%;height: auto;}.event__list__title {font-family: Kuunari, sans-serif;color: white;margin-bottom: 5px;font-weight: 700;font-size: 26px;line-height: 150%;text-align: center;text-transform: uppercase;}.event__list {max-width: 400px;width: 100%;display: grid;grid-template: 1fr;gap: 15px;list-style: none;margin-bottom: 43px;}.event__list__item {display: flex;align-items: center;gap: 15px;border: 1px solid #2664EB;background-color: white;padding: 7px 0 6px 7px;border-radius: 15px;overflow: hidden;}.event__list__item__number {display: flex;align-items: center;justify-content: center;flex-shrink: 0;padding: 13px 14px 13px 12px;background-color: #548AFF;border-radius: 15px;}.event__list__item__text {font-family: Poppins, sans-serif;font-size: 16px;font-weight: 500;line-height: 130%;}.event__list__item__text span {font-weight: 600;color: #548AFF;}.discount {background-color: #C70000;width: 100%;width: 440;border-top-left-radius: 15px;border-top-right-radius: 15px;display: flex;align-items: center;justify-content: space-between;padding: 4px 42px;gap: 9px;color: white;position: fixed;bottom: 0;z-index: 40;}.discount__title {font-family: Poppins, sans-serif;font-weight: 600;font-size: clamp(12px, 4vw, 18px);line-height: 120%;}@media (max-width:450px) {.event__btn {font-size: 20px;padding: 35px 0;}.date__imgs {left: -20px;top: 31%;}.date__img {right: -20px;top: 31%;}.expert__img {margin-bottom: -110px;}}@media (max-width:400px) {.expert__img {margin-bottom: -95px;}}@media (max-width:355px) {.expert__img {max-width: 400px;width: 100%;margin-bottom: -83px;}.event__btn {font-size: 16px;padding: 30px 0;}.header {padding: 20px 22px;}.event__list__item__text {font-size: 14px;}.date__imgs {left: -10px;top: 32%;max-width: 200px;width: 100%;transform: rotate(-65deg);}.date__img {right: -11px;top: 32%;max-width: 200px;transform: rotate(22.11deg);width: 100%;}}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #111A29;
+        }
+
+        .container {
+            max-width: 490px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 10px;
+            padding-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: sans-serif;
+            position: relative;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #090C13;
+            border: 0.63px solid #090C14;
+            border-radius: 0px 0px 20px 20px;
+            padding: 21px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 17px;
+            min-width: 313px;
+            max-width: 348px;
+        }
+
+        .header__box {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .header__box-dot {
+            background-color: #27C459;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+        }
+
+        .header__text {
+            font-family: Montserrat, sans-serif;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            text-wrap: nowrap;
+        }
+
+        .date__timer {
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(28px, 8vw, 32px);
+            font-weight: 600;
+            font-family: "Kuunari", sans-serif;
+            line-height: 150%;
+            position: relative;
+            z-index: 30;
+            width: fit-content;
+            min-height: 40px;
+        }
+
+        .title {
+            font-family: "Big Shoulders Display", sans-serif;
+            font-weight: 800;
+            font-size: clamp(23px, 7vw, 36px);
+            line-height: 135%;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .title span {
+            background: linear-gradient(90deg, #FFF2BD 0%, #FFD72E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text {
+            font-family: Poppins, sans-serif;
+            font-weight: 400;
+            color: white;
+            font-size: clamp(12px, 3.5vw, 16px);
+            line-height: 135%;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #FFC65A;
+            border-radius: 10px;
+            margin-bottom: 9px;
+        }
+
+        .text span {
+            font-weight: 600;
+        }
+
+        .date__imgs {
+            position: absolute;
+            transform: rotate(16deg);
+            left: 3%;
+            z-index: 0;
+        }
+
+        .date__img {
+            position: absolute;
+            transform: rotate(-64deg);
+            right: -30px;
+            top: -50%;
+        }
+
+        .center {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .center__bg {
+            position: absolute;
+            left: 55%;
+            top: 270px;
+            transform: translate(-55.4%);
+            z-index: -1;
+            max-width: 626px;
+            width: 100%;
+        }
+
+        .expert__img {
+            object-fit: contain;
+            max-width: 483px;
+            width: 100%;
+            height: auto;
+            margin-bottom: -119px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .event__btn {
+            text-decoration: none;
+            cursor: pointer;
+            max-width: 409px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: none;
+            position: relative;
+            background-color: #2664EB;
+            box-shadow: 0px 6px 0px 0px #003099;
+            border-radius: 13px;
+            padding: 40px 0;
+            z-index: 20;
+            font-family: "Poppins", sans-serif;
+            color: white;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 150%;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .event__btn__img {
+            width: 100%;
+            height: auto;
+        }
+
+        .event__list__title {
+            font-family: Kuunari, sans-serif;
+            color: white;
+            margin-bottom: 5px;
+            font-weight: 700;
+            font-size: clamp(28px, 8vw, 32px);
+            line-height: 150%;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .event__list {
+            max-width: 400px;
+            width: 100%;
+            display: grid;
+            grid-template: 1fr;
+            gap: 15px;
+            list-style: none;
+            margin-bottom: 43px;
+        }
+
+        .event__list__item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border: 1px solid #2664EB;
+            background-color: white;
+            padding: 7px 0 6px 7px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .event__list__item__number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #548AFF;
+            border-radius: 15px;
+            height: 74px;
+            max-width: 74px;
+            width: 100%;
+        }
+
+
+        .event__list__item__text {
+            font-family: Poppins, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 130%;
+        }
+
+        .event__list__item__text span {
+            font-weight: 600;
+            color: #548AFF;
+        }
+
+        .discount {
+            background-color: #C70000;
+            width: 100%;
+            width: 440;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4px 42px;
+            gap: 9px;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            z-index: 40;
+        }
+
+        .discount__title {
+            font-family: Poppins, sans-serif;
+            font-weight: 600;
+            font-size: clamp(12px, 4vw, 18px);
+            line-height: 120%;
+        }
+
+        @media (max-width:450px) {
+            .event__btn {
+                font-size: 20px;
+                padding: 35px 0;
+            }
+
+            .date__imgs {
+                left: -20px;
+                top: 31%;
+            }
+
+            .date__img {
+                right: -20px;
+                top: 31%;
+            }
+
+            .expert__img {
+                margin-bottom: -110px;
+            }
+        }
+
+        @media (max-width:400px) {
+            .expert__img {
+                margin-bottom: -95px;
+            }
+        }
+
+        @media (max-width:355px) {
+            .expert__img {
+                max-width: 400px;
+                width: 100%;
+                margin-bottom: -83px;
+            }
+
+            .event__btn {
+                font-size: 16px;
+                padding: 30px 0;
+            }
+
+            .header {
+                padding: 20px 22px;
+            }
+
+            .event__list__item__text {
+                font-size: 14px;
+            }
+
+            .date__imgs {
+                left: -10px;
+                top: 32%;
+                max-width: 200px;
+                width: 100%;
+                transform: rotate(-65deg);
+            }
+
+            .date__img {
+                right: -11px;
+                top: 32%;
+                max-width: 200px;
+                transform: rotate(22.11deg);
+                width: 100%;
+            }
+        }
     </style>
     <link rel="stylesheet" href="./css/modal.css" media="print" onload="this.media='all'" />
     <noscript>
@@ -60,7 +383,7 @@
                 <h3 class="event__list__title">Bepul darsda siz:</h3>
                 <li class="event__list__item">
                     <div class="event__list__item__number">
-                        <img src="./images/info/1.avif" alt="icons" width="35" height="35" decoding="async"
+                        <img src="./images/info/1.avif" alt="icons" width="48" height="48" decoding="async"
                             loading="lazy">
                     </div>
                     <p class="event__list__item__text">
@@ -69,7 +392,7 @@
                 </li>
                 <li class="event__list__item">
                     <div class="event__list__item__number">
-                        <img src="./images/info/2.avif" alt="icons" width="35" height="35" decoding="async"
+                        <img src="./images/info/2.avif" alt="icons" width="36" height="45" decoding="async"
                             loading="lazy">
                     </div>
                     <p class="event__list__item__text">
@@ -78,7 +401,7 @@
                 </li>
                 <li class="event__list__item">
                     <div class="event__list__item__number">
-                        <img src="./images/info/3.avif" alt="icons" width="35" height="35" decoding="async"
+                        <img src="./images/info/3.avif" alt="icons" width="48" height="48" decoding="async"
                             loading="lazy">
                     </div>
                     <p class="event__list__item__text">
@@ -88,7 +411,7 @@
                 </li>
                 <li class="event__list__item">
                     <div class="event__list__item__number">
-                        <img src="./images/info/4.avif" alt="icons" width="35" height="35" decoding="async"
+                        <img src="./images/info/4.avif" alt="icons" width="43" height="35" decoding="async"
                             loading="lazy">
                     </div>
                     <p class="event__list__item__text">
